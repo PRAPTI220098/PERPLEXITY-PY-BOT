@@ -9,10 +9,7 @@ try:
     from perplexityai import Perplexity
 except:
     os.system("python -m pip install -U perplexityai")
-from hh import keep_alive
-
-token=os.environ.get("TOK")
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot("6546252151:AAFJ-9ey_n2wmywNM5wcDdW7vWgV9UmJNqQ")
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -43,5 +40,4 @@ def chatbot(text):
     cc = f"{res[-1]}"
     return cc
 
-keep_alive()
-bot.polling()
+bot.infinity_polling()
